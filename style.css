@@ -623,6 +623,7 @@ right:0;
   }
 
   .textt {
+    position: relative;
       margin-top: -100px;
       display: block;
   }
