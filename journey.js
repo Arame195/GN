@@ -297,28 +297,3 @@ active=false;
 
 
 }
-
-        function openTaxi(lat, lon) {
-
-          // Если координаты ещё не указаны
-          if (!lat || !lon) {
-            alert("Адрес ещё не настроен");
-            return;
-          }
-
-          const appLink =
-            `yandextaxi://route?end-lat=${lat}&end-lon=${lon}`;
-
-          const webLink =
-            `https://3.redirect.appmetrica.yandex.com/route?end-lat=${lat}&end-lon=${lon}`;
-
-          // попытка открыть приложение
-          window.location.href = appLink;
-
-          // если приложение не открылось — открыть браузерную версию
-          setTimeout(() => {
-            window.location.href = webLink;
-          }, 1500);
-        }
-
-        
