@@ -616,17 +616,13 @@ right:0;
   }
 
   .Text {
-      font-size: 18px;
+      font-size: 28px;
       text-align: center;
       align-items: center;
       font-family: cursive;
-  }
-
-  .textt {
-      position: relative;
+      position: absolute;
       top: -100px;
   }
-
   
   button {
     margin-top: 10px;
