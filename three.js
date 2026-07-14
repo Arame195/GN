@@ -39,26 +39,47 @@
   revealEls.forEach(el=>io.observe(el));
 
   // countdown to 7 June 2026, 15:00
-  const target = new Date('2026-06-07T15:00:00');
-  function tick(){
-    const now = new Date();
-    let diff = Math.max(0, target - now);
-    const d = Math.floor(diff/86400000); diff -= d*86400000;
-    const h = Math.floor(diff/3600000); diff -= h*3600000;
-    const m = Math.floor(diff/60000); diff -= m*60000;
-    const s = Math.floor(diff/1000);
-    document.getElementById('cd-d').textContent = String(d).padStart(2,'0');
-    document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
-    document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
-    document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
-  }
-  tick(); setInterval(tick, 1000);
+
 
   // rsvp form (visual only — no backend wired up)
-  document.getElementById('rsvpForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    document.getElementById('rsvp-note').classList.add('show');
-    this.reset();
-  });
 
   
+  const form = document.getElementById("rsvpForm");
+
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const button = form.querySelector("button");
+
+    button.disabled = true;
+    button.textContent = "Отправляем...";
+
+    const data = {
+        name: document.getElementById("name").value,
+        attend: document.querySelector('input[name="attend"]:checked').value,
+        side: document.querySelector('input[name="side"]:checked').value,
+        guests: document.getElementById("guests").value
+    };
+
+    try {
+        const response = await fetch("https://proud-art-0acc.rwgjsrz5pk.workers.dev/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) throw new Error();
+
+        document.getElementById("rsvp-note").style.display = "block";
+
+        form.reset();
+
+    } catch (err) {
+        alert("Ошибка отправки 😢");
+    }
+
+    button.disabled = false;
+    button.textContent = "Отправить";
+});
