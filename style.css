@@ -616,12 +616,12 @@ right:0;
   }
 
   .Text {
-      font-size: 19px;
+      font-size: 14px;
       text-align: center;
       align-items: center;
       font-family: cursive;
       position: absolute;
-      top: -100px;
+      top: -120px;
   }
   
   button {
