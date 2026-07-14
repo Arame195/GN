@@ -616,7 +616,7 @@ right:0;
   }
 
   .Text {
-      font-size: 18px;
+      font-size: 22px;
       text-align: center;
       align-items: center;
       font-family: cursive;
@@ -630,10 +630,10 @@ right:0;
     font-size: 15px;
     font-weight: 700;
     color: #333;
-    border-radius: 10px;
+    border-radius: 5px;
     text-decoration: none;
     position: relative;
-    top: 30px;
+    top: 20px;
   }
 
   .time {
@@ -644,9 +644,9 @@ right:0;
   }
 
   strong {
-    font-size: 12px;
+    font-size: 14px;
     color: #333;
-    margin-bottom: 10px;
+    padding: 30px;
   }
 
 .reveal {
