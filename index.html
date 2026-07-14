@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="hy">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Анна &amp; Роберт — 7 июня 2026</title>
+  <title>Նարե
+    <span class="script-and">&amp;</span>
+    Գևորգ
+  </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian&display=swap" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cinzel:wght@400;600&display=swap"
     rel="stylesheet">
+
+    <audio id="music">
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
 </head>
 
 <body>
@@ -18,7 +26,7 @@
 
   <!-- ENVELOPE INTRO -->
   <div id="envelope">
-    <div class="seal" id="sealBtn" role="button" tabindex="0" aria-label="Открыть приглашение">
+    <div class="seal" id="sealBtn" role="button" tabindex="0" aria-label="Բացել հրավերը">
       <span>G&amp;N</span>
     </div>
     <div class="seal-hint"></div>
@@ -38,183 +46,274 @@
   <!-- SAVE THE DATE -->
   <section id="save-date" class="reveal">
     <div class="eyebrow"></div>
-    <h2>Սիրելի՛ հյուրեր</h2>
-    <p>Մեր կյանքում սպասվում է մեծ փոփոխություն։ Ցանկանում ենք, որ այդ հիասքանչ օրը մեր կողքին լինեն միայն մեզ հարազատ և
-      թանկագին մարդիկ։ Ուրախ կլինենք Ձեզ հետ կիսելու մեզ համար այդքան կարևոր օրը։</p>
+    <h2 class="block">Սիրելի՛ հյուրեր</h2>
+    <p class="block">
+      Մեր կյանքում սպասվում է մեծ փոփոխություն։ Ցանկանում ենք, որ այդ հիասքանչ օրը մեր կողքին լինեն միայն մեզ հարազատ և
+      թանկագին մարդիկ։ Ուրախ կլինենք Ձեզ հետ կիսելու մեզ համար այդքան կարևոր օրը։
+    </p>
+
     <div class="calendar">
-      <div class="month">Օգոստոս 2026</div>
+      <div class="month block">Օգոստոս 2026</div>
       <div class="cal-grid" id="calGrid"></div>
     </div>
   </section>
+
   <section id="text" class="textt">
     <div class="Text">
-      <p>Ձեր հարմարության համար մենք պատրաստել ենք քարտեզ։ Հուսով ենք,որ Դուք հեշտությամբ կգտնեք հարսանիքի վայրը և
-        կուրախացնեք մեզ Ձեր ներկայությամբ։</p>
+      <p>
+        Ձեր հարմարության համար մենք պատրաստել ենք քարտեզ։ Հուսով ենք, որ Դուք հեշտությամբ կգտնեք հարսանիքի վայրը և
+        կուրախացնեք մեզ Ձեր ներկայությամբ։
+      </p>
     </div>
   </section>
 
   <!-- TIMELINE -->
   <!-- ================= ROUTE ================= -->
-<section id="timeline" class="timeline">
+  <section id="timeline" class="timeline">
 
 
-<canvas id="timelineCanvas" width="420" height="1100"></canvas>
+    <canvas id="timelineCanvas" width="420" height="1100"></canvas>
 
 
-<div id="marker">
+    <div id="marker">
 
-  <div class="pin">
-    <span></span>
-  </div>
+      <div class="pin">
+        <span></span>
+      </div>
 
-</div>
-
-
-
-<div class="event left" data-pos=".15">
-
-<span class="time"> 09:30</span>
-
-<h2>Փեսայի տուն</h2>
-<strong>ք. Հրազդան,
-            Ջրառատ 281</strong>
-</p>
-
-<button onclick="openTaxi('40.4953','44.8047')">
-Yandex Taxi
-          </button>
+    </div>
 
 
-</div>
+    <div class="event left" data-pos=".15">
 
+      <span class="time">09:30</span>
 
+      <h2>Փեսայի տուն</h2>
 
+      <strong>
+        ք. Հրազդան,
+        Ջրառատ 281
+      </strong>
 
-<div class="event right" data-pos=".40">
+      <button onclick="openTaxi('40.4953','44.8047')">
+        Բացել քարտեզը
+      </button>
 
-<span class="time"> 10:30</span>
-
-<h2>Հարսի տուն</h2>
-
-<strong>Միկրոշրջան 302/33</strong>
-
-<button onclick="openTaxi('40.54591','44.76975')">
-            Yandex Taxi
-          </button>
-
-</div>
+    </div>
 
 
 
+    <div class="event right" data-pos=".40">
 
-<div class="event left" data-pos=".65">
+      <span class="time">10:30</span>
 
-<span class="time"> 13:00</span>
+      <h2>Հարսի տուն</h2>
 
-<h2>Սուրբ Գևորգ եկեղեցի</h2>
+      <strong>Միկրոշրջան 302/33</strong>
 
-<strong>Աշտարակ,
-            Մուղնի</strong>
+      <button onclick="openTaxi('40.54591','40.76975')">
+        Բացել քարտեզը
+      </button>
 
-<button onclick="openTaxi('40.31498','44.37167')">
-            Yandex Taxi
-          </button>
+    </div>
+    <div class="event left" data-pos=".65">
 
-</div>
+      <span class="time">13:00</span>
+
+      <h2>Սուրբ Գևորգ եկեղեցի</h2>
+
+      <strong>
+        Աշտարակ,
+        Մուղնի
+      </strong>
+
+      <button onclick="openTaxi('40.31498','44.37167')">
+        Բացել քարտեզը
+      </button>
+
+    </div>
 
 
 
 
-<div class="event right" data-pos=".88">
+    <div class="event right" data-pos=".88">
 
-<span class="time"> 15:00</span>
+      <span class="time">17:00</span>
 
-<h2>Granada Hall</h2>
+      <h2>Granada Hall</h2>
 
-<strong>Զորավար Անդրանիկ 14</strong>
+      <strong>Զորավար Անդրանիկ 14</strong>
 
-<button onclick="openTaxi('40.4967','44.7648')">
-            Yandex Taxi
-          </button>
+      <button onclick="openTaxi('40.4967','44.7648')">
+        Բացել քարտեզը
+      </button>
 
-</div>
+    </div>
 
+  </section>
 
-</section>
+  <section class="custom-popup">
+    <div class="popup-window">
+      <h2>Մանրուքներ</h2>
+      <p>Ձեզ հետ բերեք ՍԵՐ, ժպիտներ ու անսահման դրական էմոցիաներ, ինչպես նաև հարմարավետ կոշիկներ՝ պարելու համար։
+
+        Հիշիր՝ այս օրը ոչ հագուստի, ոչ էլ շքեղության մասին է։ Սա այն օրն է, երբ սերը ապացուցում է իր իրական գոյությունը։
+
+        Թույլ տանք, որ այդ օրը սպիտակ զգեստով լինի միայն հարսնացուն 🤍</p>
+    </div>
+  </section>
 
 
   <!-- RSVP -->
   <section id="rsvp" class="reveal">
     <div class="eyebrow">RSVP</div>
-    <h2>Подтвердите визит</h2>
-    <p class="sub">Просим ответить до 1 мая — это поможет нам всё подготовить.</p>
-    <form id="rsvpForm">
+
+    <h2 class="block">Հաստատեք ձեր ներկայությունը</h2>
+
+    <p class="sub block">
+      Խնդրում ենք պատասխանել մինչև մայիսի 1-ը՝ որպեսզի կարողանանք ամեն ինչ պատրաստել։
+    </p>
+
+    <form id="rsvpForm" class="block">
+
       <div>
-        <label for="name">Ваше имя и фамилия</label>
+        <label for="name">Ձեր անունը և ազգանունը</label>
         <input type="text" id="name" required>
       </div>
+
+
       <div>
-        <label>Сможете прийти?</label>
+        <label>Կկարողանա՞ք գալ</label>
+
         <div class="radio-row">
-          <label><input type="radio" name="attend" value="yes" checked> Да, буду</label>
-          <label><input type="radio" name="attend" value="no"> Не смогу</label>
+
+          <label>
+            <input type="radio" name="attend" value="yes" checked>
+            Այո, կգամ
+          </label>
+
+          <label>
+            <input type="radio" name="attend" value="no">
+            Չեմ կարող
+          </label>
+
         </div>
       </div>
 
-      <div>
-        <label>hars pesa</label>
-        <div class="radio-row">
-          <label><input type="radio" name="side" value="hars" checked>hars</label>
-          <label><input type="radio" name="side" value="pesa">pesa</label>
-        </div>
-      </div>
+
 
       <div>
-        <label for="guests">Количество гостей</label>
+
+        <label>Հարս / Փեսա</label>
+
+        <div class="radio-row">
+
+          <label>
+            <input type="radio" name="side" value="hars" checked>
+            Հարս
+          </label>
+
+          <label>
+            <input type="radio" name="side" value="pesa">
+            Փեսա
+          </label>
+
+        </div>
+
+      </div>
+
+
+
+      <div>
+
+        <label for="guests">Հյուրերի քանակը</label>
+
         <select id="guests">
+
           <option>1</option>
           <option>2</option>
           <option>3</option>
           <option>4</option>
           <option>5</option>
           <option>6</option>
+
         </select>
+
       </div>
-      <button type="submit" class="btn">Отправить</button>
-      <div id="rsvp-note">Спасибо! Ваш ответ сохранён 💛</div>
+
+
+      <button type="submit" class="btn">
+        Ուղարկել
+      </button>
+
+
+      <div id="rsvp-note">
+        Շնորհակալություն։ Ձեր պատասխանը պահպանված է 💛
+      </div>
+
+
     </form>
+
   </section>
 
   <!-- GALLERY -->
   <section id="gallery" class="reveal">
-    <div class="eyebrow">Мы</div>
-    <h2>Немного о нас</h2>
-    <div class="gallery-grid">
-      <div class="photo-slot"><img src="Photos/IMG_1583.jpeg" alt="" class="IMG_photo_hero"></div>
 
-      <div class="photo-slot"><img src="Photos/IMG_1584.jpeg" alt="" class="IMG_photo_hero"></div>
-      <div class="photo-slot"><img src="Photos/IMG_1585.jpeg" alt="" class="IMG_photo_hero"></div>
+    <div class="eyebrow">Մենք</div>
+
+    <h2>Մի փոքր մեր մասին</h2>
+
+
+    <div class="gallery-grid">
+
+      <div class="photo-slot">
+        <img src="Photos/IMG_1583.jpeg" alt="" class="IMG_photo_hero">
+      </div>
+
+
+      <div class="photo-slot">
+        <img src="Photos/IMG_1584.jpeg" alt="" class="IMG_photo_hero">
+      </div>
+
+
+      <div class="photo-slot">
+        <img src="Photos/IMG_1585.jpeg" alt="" class="IMG_photo_hero">
+      </div>
+
     </div>
+
   </section>
 
-  <section id="love-animation">
-    <div id="loveCanvas"></div>
-</section>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
   <!-- FOOTER / COUNTDOWN -->
   <footer>
-    <div style="left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto"><iframe src="https://www.tickcounter.com/widget/countdown/10862567" style="top:0; left:0; width:100%; height:100%; position:absolute; border:0; overflow:hidden" title="Քիչ է մնացել"></iframe></div>
-    <div class="contact">
-      Nare <span class="script-and">&amp;</span> Gevorg<br>
-      <a href="tel:+79280307779">+374 00 000 000</a> · <a href="mailto:hello@example.com">hello@example.com</a>
+
+    <div style="left:0; width:100%; height:0; position:relative; padding-bottom:25%; margin:0 auto">
+      <iframe src="https://www.tickcounter.com/widget/countdown/10862567"
+        style="top:0; left:0; width:100%; height:100%; position:absolute; border:0; overflow:hidden"
+        title="Քիչ է մնացել">
+      </iframe>
     </div>
+
+
+    <div class="contact">
+
+      Նարե
+      <span class="script-and">&amp;</span>
+      Գևորգ
+      <br>
+
+    </div>
+
   </footer>
+
 
   <script src="three.js"></script>
   <script src="journey.js"></script>
+
 
 </body>
 

@@ -23,7 +23,7 @@
       margin: 0;
       background: var(--paper);
       color: var(--ink);
-      font-family: 'Cormorant Garamond', serif;
+      font-family: "Noto Sans Armenian", "DejaVu Sans", "Sylfaen", sans-serif;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
   }
@@ -317,7 +317,7 @@ width:45%;
 
 text-align:center;
 
-transform:translateY(-50%);
+transform:translateY(-70%);
 
 }
 
@@ -328,7 +328,6 @@ transform:translateY(-50%);
 left:0;
 
 }
-
 
 
 .event.right{
@@ -369,6 +368,8 @@ right:0;
   /* ---------- save the date ---------- */
   #save-date {
       text-align: center;
+      position: relative;
+      top: -120px;
   }
 
   #save-date h2 {
@@ -435,7 +436,7 @@ right:0;
   }
 
   #rsvp h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: var(--wine);
       margin-bottom: 10px;
   }
@@ -628,15 +629,26 @@ right:0;
 
   
   button {
-    background-color: black;
+    margin-top: 10px;
+    background: white;
+    padding: 15px 20px;
     font-size: 15px;
-    color: yellow;
-    border-radius: 30px;
-    padding: 5px;
+    font-weight: 700;
+    color: #333;
+    border-radius: 4px;
   }
 
   .time {
-    font-size: 30px;
+    font-size: 70px;
+    font-weight: 700;
+    color: rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+
+  strong {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
   }
 
   #love-animation {
@@ -653,4 +665,37 @@ right:0;
 
 #loveCanvas canvas {
     display: block;
+}
+
+.reveal {
+    position: relative;
+    bottom: 30px;
+}
+
+.block {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1.3s ease-out, transform 1s ease-out;
+}
+
+.block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.custom-popup {
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-popup .popup-window {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+  text-align: center;
+  align-items: center;
 }

@@ -77,9 +77,31 @@ form.addEventListener("submit", async (e) => {
         form.reset();
 
     } catch (err) {
-        alert("Ошибка отправки 😢");
+        alert("Error 😢");
     }
 
     button.disabled = false;
     button.textContent = "Отправить";
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const blocks = document.querySelectorAll(".block");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        // Если нужно анимацию один раз, можно отключить наблюдение
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  blocks.forEach(block => observer.observe(block));
+});
+
+const music = document.getElementById("music");
+
+sealBtn.addEventListener("click", () => {
+    music.play();
 });
